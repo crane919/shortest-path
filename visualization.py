@@ -46,6 +46,7 @@ def visualize_graph(graph, shortest_path):
 
     for (node1,node2), weight in graph.items():
         G.add_edge(node1, node2, weight=weight)
+
     # compute layout for plotting
     pos = nx.kamada_kawai_layout(G, weight='weight')
     nx.draw(G,pos)
